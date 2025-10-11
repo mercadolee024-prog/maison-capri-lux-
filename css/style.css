@@ -1,0 +1,976 @@
+/* ===== Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* ===== Color Palette ===== */
+:root {
+  --american-gold: #D5AD36;
+  --champagne: #F4F2C9;
+  --cyan-blue-azure: #4488BF;
+  --cyan-cobalt-blue: #265999;
+  --white: #ffffff;
+  --light-gray: #f9f9f9;
+}
+
+body {
+  background-color: var(--champagne);
+  color: var(--cyan-cobalt-blue);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== Header ===== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3%;
+  background-color: var(--white);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 50px;
+  margin-right: 0.5rem;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  color: var(--cyan-cobalt-blue);
+  padding: 0.3rem 0.5rem;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: var(--american-gold);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('images/hero-bg.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+
+.btn-hero {
+  padding: 1rem 2rem;
+  background-color: var(--american-gold);
+  color: var(--white);
+  font-weight: bold;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.btn-hero:hover {
+  background-color: #b8912d;
+}
+
+/* ===== About Section ===== */
+.about {
+  padding: 4rem 3%;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  color: var(--american-gold);
+  margin-bottom: 1rem;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.btn-about {
+  padding: 0.8rem 2rem;
+  background-color: var(--cyan-cobalt-blue);
+  color: var(--white);
+  border-radius: 25px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-about:hover {
+  background-color: var(--cyan-blue-azure);
+}
+
+/* ===== Video Element ===== */
+iframe {
+  display: block;
+  max-width: 100%;
+  margin: 2rem auto;
+  border: 4px solid var(--american-gold);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  background-color: #000;
+}
+
+/* ===== Collections Preview ===== */
+.collections-preview {
+  padding: 4rem 3%;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.collections-preview h2 {
+  font-size: 2.5rem;
+  color: var(--american-gold);
+  margin-bottom: 2rem;
+}
+
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.collection-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.collection-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.collection-card h3 {
+  padding: 1rem;
+  font-size: 1.2rem;
+  color: var(--cyan-cobalt-blue);
+}
+
+.collection-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn-collections {
+  padding: 0.8rem 2rem;
+  background-color: var(--cyan-cobalt-blue);
+  color: var(--white);
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.btn-collections:hover {
+  background-color: var(--cyan-blue-azure);
+}
+
+/* ===== Luxury Membership Table ===== */
+.luxury-table {
+  padding: 2rem 3%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.luxury-table h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--american-gold);
+  margin-bottom: 1.5rem;
+}
+
+.luxury-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.luxury-table th,
+.luxury-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+.luxury-table th {
+  background-color: var(--cyan-cobalt-blue);
+  color: var(--white);
+}
+
+.luxury-table tbody tr:nth-child(even) {
+  background-color: var(--light-gray);
+}
+
+@media (max-width: 768px) {
+  .luxury-table table,
+  .luxury-table thead,
+  .luxury-table tbody,
+  .luxury-table th,
+  .luxury-table td,
+  .luxury-table tr {
+    display: block;
+  }
+  .luxury-table thead tr {
+    display: none;
+  }
+  .luxury-table tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .luxury-table td {
+    text-align: left;
+    padding-left: 50%;
+    position: relative;
+  }
+  .luxury-table td::before {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+    color: var(--cyan-cobalt-blue);
+  }
+  .luxury-table td {
+  padding: 0.75rem;
+}
+}
+
+/* ===== Luxury Membership Form ===== */
+.luxury-form {
+  padding: 3rem 3%;
+  max-width: 800px;
+  margin: 3rem auto;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.luxury-form h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--american-gold);
+  margin-bottom: 1.5rem;
+}
+
+.luxury-form fieldset {
+  border: 2px solid var(--american-gold);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.luxury-form legend {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--cyan-cobalt-blue);
+  padding: 0 0.5rem;
+}
+
+.luxury-form label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 500;
+}
+
+.luxury-form input,
+.luxury-form select,
+.luxury-form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.luxury-form .form-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.luxury-form button {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 25px;
+  background-color: var(--american-gold);
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.luxury-form button:hover {
+  background-color: #b8912d;
+}
+
+@media (max-width: 768px) {
+  .luxury-form fieldset {
+    padding: 1.5rem;
+  }
+  .luxury-form .form-buttons {
+    flex-direction: column;
+  }
+  .luxury-form button {
+    width: 100%;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--cyan-cobalt-blue);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .socials {
+  margin-top: 1rem;
+}
+
+footer .socials a {
+  color: var(--american-gold);
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: var(--white);
+}
+
+/* ===== Category Grid ===== */
+.category-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+.category-card {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: var(--white);
+}
+
+.category-card h3 {
+  margin-bottom: 15px;
+  color: var(--cyan-cobalt-blue);
+}
+
+.item-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.item-card {
+  flex: 1 1 calc(25% - 15px);
+  text-align: center;
+}
+
+.item-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item-card h4 {
+  margin: 10px 0 5px;
+  font-size: 1rem;
+}
+
+.item-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .item-card {
+    flex: 1 1 calc(33.33% - 15px);
+  }
+}
+
+@media (max-width: 768px) {
+  .item-card {
+    flex: 1 1 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 480px) {
+  .item-card {
+    flex: 1 1 100%;
+  }
+}
+/* =========================
+   Global Reset & Base Styles
+   ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #F4F2C9; /* Champagne */
+  color: #265999; /* Cyan Cobalt Blue */
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* =========================
+   Header
+   ========================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3%;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  width: 50px;
+  margin-right: 0.5rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #265999;
+}
+
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav ul li a {
+  font-weight: bold;
+  color: #265999;
+  padding: 0.3rem 0.5rem;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #D5AD36; /* American Gold */
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('../images/about-hero.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.3rem;
+}
+
+/* =========================
+   About Sections
+   ========================= */
+.about-identity,
+.about-philosophy,
+.about-pillars {
+  padding: 4rem 8%;
+  text-align: center;
+}
+
+.about-identity h2,
+.about-philosophy h2,
+.about-pillars h2 {
+  font-size: 2rem;
+  color: #D5AD36; /* American Gold */
+  margin-bottom: 1rem;
+}
+
+.about-identity p,
+.about-philosophy p {
+  max-width: 800px;
+  margin: 0 auto 1rem auto;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   Pillars Grid
+   ========================= */
+.pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.pillars article {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.pillars article:hover {
+  transform: translateY(-5px);
+}
+
+.pillars h3 {
+  color: #4488BF; /* Cyan-Blue Azure */
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+  background-color: #265999; /* Cyan Cobalt Blue */
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .socials {
+  margin-top: 1rem;
+}
+
+footer .socials a {
+  color: #D5AD36; /* American Gold */
+  margin: 0 0.5rem;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: #fff;
+}
+
+/* =========================
+   Responsive Media Queries
+   ========================= */
+@media (max-width: 1024px) {
+  .hero h2 {
+    font-size: 2.5rem;
+  }
+  .about-identity, .about-philosophy, .about-pillars {
+    padding: 3rem 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav ul {
+    gap: 1rem;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+  .pillars {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  header, footer {
+    display: none;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+}
+
+
+/* ===============================
+   Contact Form
+=============================== */
+.contact-form {
+  padding: 50px;
+  background-color: #fff;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #a88c62;
+}
+
+.contact-form fieldset {
+  border: none;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form .form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+}
+
+.contact-form button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: #a88c62;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #8c6f44;
+}
+
+/* ===============================
+   Contact Info Table
+=============================== */
+.contact-info {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.contact-info h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #a88c62;
+}
+
+.luxury-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.luxury-table th,
+.luxury-table td {
+  padding: 15px;
+}
+
+.luxury-table th {
+  background-color: #a88c62;
+  color: #fff;
+}
+
+.luxury-table tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+/* ===============================
+   Call to Action
+=============================== */
+.luxury-cta {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #a88c62;
+  color: #fff;
+  margin-top: 50px;
+}
+
+.luxury-cta a.btn-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #fff;
+  color: #a88c62;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.luxury-cta a.btn-primary:hover {
+  background-color: #d4b77f;
+  color: #fff;
+}
+
+/* ===============================
+   Footer
+=============================== */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+/* ===============================
+   Responsive
+=============================== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-form,
+  .contact-info {
+    padding: 20px;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--cyan-cobalt-blue); /* Dark blue */
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+footer .socials {
+  margin-top: 1rem;
+}
+
+footer .socials a {
+  color: var(--american-gold);
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+footer .socials a:hover {
+  color: var(--white);
+}
+/* =========================
+   Famous Luxury Lifestyle Section
+=============================== */
+.famous-lifestyle {
+  padding: 60px 5%;
+  background-color:#F4F2C9;
+  text-align: center;
+}
+
+.famous-lifestyle h2 {
+  font-size: 2.5rem;
+  color: var(--american-gold);
+  margin-bottom: 20px;
+}
+
+.famous-lifestyle p {
+  font-size: 1.2rem;
+  color: var(--cyan-cobalt-blue);
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* Optional: if you plan to add cards or grid for experiences */
+.famous-lifestyle .experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.famous-lifestyle .experience-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.famous-lifestyle .experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.famous-lifestyle .experience-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.famous-lifestyle .experience-card h3 {
+  padding: 15px;
+  font-size: 1.2rem;
+  color: var(--cyan-cobalt-blue);
+}
+
+.famous-lifestyle .experience-card p {
+  padding: 0 15px 15px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .famous-lifestyle h2 {
+    font-size: 2rem;
+  }
+  .famous-lifestyle p {
+    font-size: 1rem;
+  }
+}
+
+/* =========================
+   About Identity Section
+=============================== */
+.about-identity {
+  padding: 60px 5%;
+  text-align: center;
+  background-color: var(--champagne);
+}
+
+.about-identity h2 {
+  font-size: 2.5rem;
+  color: var(--american-gold);
+  margin-bottom: 20px;
+}
+
+.about-identity p {
+  font-size: 1.2rem;
+  color: var(--cyan-cobalt-blue);
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  line-height: 1.6;
+}
+
+/* =========================
+   Philosophy Section
+=============================== */
+.about-philosophy {
+  padding: 60px 5%;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.about-philosophy h2 {
+  font-size: 2.5rem;
+  color: var(--american-gold);
+  margin-bottom: 20px;
+}
+
+.about-philosophy p {
+  font-size: 1.2rem;
+  color: var(--cyan-cobalt-blue);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* =========================
+   Responsive
+=============================== */
+@media screen and (max-width: 768px) {
+  .about-identity h2,
+  .about-philosophy h2 {
+    font-size: 2rem;
+  }
+
+  .about-identity p,
+  .about-philosophy p {
+    font-size: 1rem;
+  }
+}
