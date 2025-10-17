@@ -73,7 +73,7 @@ header nav ul li a.active {
 
 /* ===== Hero Section ===== */
 .hero {
-  background-image: url('../images/hero-bg.jpg');
+  background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -847,7 +847,6 @@ footer .socials a:hover {
   line-height: 1.6;
 }
 
-/* Optional: if you plan to add cards or grid for experiences */
 .famous-lifestyle .experience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
