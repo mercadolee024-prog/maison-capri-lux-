@@ -37,13 +37,14 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 3%;
-  background-color: var(--white);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  background-color: var(--white, #fff);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+/* ===== Logo ===== */
 header .logo {
   display: flex;
   align-items: center;
@@ -54,21 +55,32 @@ header .logo img {
   margin-right: 0.5rem;
 }
 
+header h1 {
+  font-size: 1.5rem;
+  color: var(--cyan-cobalt-blue, #265999);
+}
+
+/* ===== Navigation ===== */
 header nav ul {
   display: flex;
   gap: 2rem;
+  list-style: none;
 }
 
 header nav ul li a {
   font-weight: bold;
-  color: var(--cyan-cobalt-blue);
+  color: var(--cyan-cobalt-blue, #265999); /* default link color */
   padding: 0.3rem 0.5rem;
-  transition: 0.3s;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
+/* ===== Hover & Active Effects ===== */
 header nav ul li a:hover,
 header nav ul li a.active {
-  color: var(--american-gold);
+  color: var(--american-gold, #D5AD36); /* hover/active color */
+  transform: scale(1.05); /* slight zoom for feedback */
+  border-bottom: 2px solid var(--american-gold, #D5AD36);
 }
 
 /* ===== Hero Section ===== */
@@ -482,54 +494,6 @@ a {
 ul {
   list-style: none;
 }
-
-/* =========================
-   Header
-   ========================= */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 3%;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-}
-
-header .logo img {
-  width: 50px;
-  margin-right: 0.5rem;
-}
-
-header h1 {
-  font-size: 1.5rem;
-  color: #265999;
-}
-
-header nav ul {
-  display: flex;
-  gap: 2rem;
-}
-
-header nav ul li a {
-  font-weight: bold;
-  color: #265999;
-  padding: 0.3rem 0.5rem;
-  transition: 0.3s;
-}
-
-header nav ul li a:hover,
-header nav ul li a.active {
-  color: #D5AD36; /* American Gold */
-}
-
 
 /* =========================
    About Sections
